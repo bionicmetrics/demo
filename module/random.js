@@ -8,6 +8,7 @@
 // macro - macros for doing things like getting elements and other neat things
 
 async function example(driver, param1) {
+    logger.info('A module edit');
     await macro.get(driver, 'app.bionicmetrics.com');
 }
 
