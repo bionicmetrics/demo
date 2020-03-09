@@ -6,6 +6,7 @@
 // axios - for dem api calls and such
 // macro - macros for doing things like getting elements and other neat things
 async function test(baseUrl, driver, data) {
+    await random.unsplash(driver);
 }
 
 test(baseUrl, driver, data); // implicitly returns a promise

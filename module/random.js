@@ -7,13 +7,19 @@
 // axios - for dem api calls and such
 // macro - macros for doing things like getting elements and other neat things
 
-async function example(driver, param1) {
-    logger.info('A module edit');
-    await macro.get(driver, 'app.bionicmetrics.com');
-}
-
 // Exports so you can then use random.example(...)
 const random = {
-    example
+    async picsum(driver) {
+        const x = macro.randomNumber(3);
+        const y = macro.randomNumber(3);
+        logger.info(`Getting random image with dimensions ${x}x${y} from picsum`);
+        await macro.get(driver, `https://picsum.photos/${x}/${y}`);
+    },
+    async unsplash(driver) {
+        const x = macro.randomNumber(3);
+        const y = macro.randomNumber(3);
+        logger.info(`Getting random image with dimensions ${x}x${y} from unsplash`);
+        await macro.get(driver, `https://source.unsplash.com/random/${x}x${y}`);
+    }
+    
 }
-random; //Implicitly returns
