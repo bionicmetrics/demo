@@ -21,5 +21,4 @@ const random = {
         logger.info(`Getting random image with dimensions ${x}x${y} from unsplash`);
         await macro.get(driver, `https://source.unsplash.com/random/${x}x${y}`);
     }
-    
 }
