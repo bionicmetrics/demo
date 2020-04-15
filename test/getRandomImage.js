@@ -7,6 +7,7 @@
 // macro - macros for doing things like getting elements and other neat things
 async function test(baseUrl, driver, data) {
     // changing and committing on master, adding something and local commit
+    logger.info('test');
     await random.picsum(driver);
 }
 
